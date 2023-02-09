@@ -9,7 +9,7 @@ public class flipFlop{
             for (int j = 0; j < n; j++) {
                 array[j] = sc.nextInt();
             }
-            soln(array);
+            solution(array);
         }
         sc.close();
     }
@@ -18,7 +18,7 @@ public class flipFlop{
         arr[i + 1] = -arr[i + 1];
 
     }
-    public static void soln(int[] array){
+    public static void solution(int[] array){
         int sum = 0;
         boolean flag = false;
         if (array.length == 2) {
