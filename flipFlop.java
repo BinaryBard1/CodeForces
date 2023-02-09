@@ -13,7 +13,7 @@ public class flipFlop{
         }
         sc.close();
     }
-    public static void negateElement(int arr[], int i) {
+    public static void negateElement(int[] arr, int i) {
         arr[i] = -arr[i];
         arr[i + 1] = -arr[i + 1];
 
