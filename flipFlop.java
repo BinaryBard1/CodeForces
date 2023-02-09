@@ -18,12 +18,33 @@ public class flipFlop{
         arr[i + 1] = -arr[i + 1];
 
     }
+    public static boolean isSameValues(int[] array) {
+        if (array.length == 0) {
+            return false;
+        }
+
+        int firstValue = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] != firstValue) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void solution(int[] array){
         int sum = 0;
         boolean flag = false;
         if (array.length == 2) {
             negateElement(array, 0);
             sum = array[0]+array[1];
+        }
+        else if (isSameValues(array)) {
+            negateElement(array, 0);
+            for (int i : array) {
+                sum += i;
+            }
+
         }
         else {
             for (int z = 0; z < array.length-1; z++) {
@@ -32,9 +53,6 @@ public class flipFlop{
                         negateElement(array, z);
                     }
                     flag = true;
-                }
-                else{
-                    negateElement(array, z);
                 }
                 sum += array[z];
             }
