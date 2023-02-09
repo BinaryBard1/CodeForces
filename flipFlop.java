@@ -33,6 +33,9 @@ public class flipFlop{
                     }
                     flag = true;
                 }
+                else{
+                    negateElement(array, z);
+                }
                 sum += array[z];
             }
             sum+=array[array.length-1];
